@@ -13,7 +13,7 @@ namespace Pantarei\User\Model;
 
 interface RoleManagerInterface extends ModelManagerInterface
 {
-    public function createRule();
+    public function createRole();
 
     public function deleteRole(RoleInterface $role);
 
