@@ -11,9 +11,15 @@
 
 namespace Pantarei\User\Model;
 
-use Symfony\Component\Security\Core\Role\RoleInterface as AdvancedRoleInterfacve;
-
-interface RoleInterface extends ModelInterface, AdvancedRoleInterfacve
+interface RoleManagerInterface extends ModelManagerInterface
 {
-    public function setRole($role);
+    public function createRule();
+
+    public function deleteRole(RoleInterface $role);
+
+    public function reloadRole(RoleInterface $role);
+
+    public function updateRole(RoleInterface $role);
+
+    public function findRoles();
 }

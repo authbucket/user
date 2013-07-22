@@ -13,37 +13,17 @@ namespace Pantarei\User\Model;
 
 use Symfony\Component\Security\Core\User\AdvancedUserInterface;
 
-interface UserInterface extends AdvancedUserInterface
+interface UserInterface extends ModelInterface, AdvancedUserInterface
 {
-    public function setLangcode($langcode);
+    public function setUsername($username);
 
-    public function getLangcode();
+    public function setPassword($password);
+
+    public function setSalt($salt);
+
+    public function setRoles($roles);
 
     public function setMail($mail);
 
     public function getMail();
-
-    public function setCreated($created);
-
-    public function getCreated();
-
-    public function setAccess($access);
-
-    public function getAccess();
-
-    public function setLogin($login);
-
-    public function getLogin();
-
-    public function setStatus($status);
-
-    public function getStatus();
-
-    public function setTimezone($timezone);
-
-    public function getTimezone();
-
-    public function setInit($init);
-
-    public function getInit();
 }
