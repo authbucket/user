@@ -11,9 +11,9 @@
 
 namespace Pantarei\User\Model;
 
-use Symfony\Component\Security\Core\User\AdvancedUserInterface;
+use Symfony\Component\Security\Core\User\AdvancedUserInterface as SecurityUserInterface;
 
-interface UserInterface extends ModelInterface, AdvancedUserInterface
+interface UserInterface extends ModelInterface, SecurityUserInterface
 {
     public function setUsername($username);
 
