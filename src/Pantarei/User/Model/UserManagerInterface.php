@@ -11,6 +11,7 @@
 
 namespace Pantarei\User\Model;
 
+use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
 
 interface UserManagerInterface extends ModelManagerInterface, UserProviderInterface

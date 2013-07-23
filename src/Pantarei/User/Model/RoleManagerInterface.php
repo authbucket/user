@@ -11,6 +11,8 @@
 
 namespace Pantarei\User\Model;
 
+use Symfony\Component\Security\Core\Role\RoleInterface;
+
 interface RoleManagerInterface extends ModelManagerInterface
 {
     public function createRole();
