@@ -95,6 +95,10 @@ abstract class WebTestCase extends SilexWebTestCase
         });
 
         $app['security.firewalls'] = array(
+            'login_path' => array(
+                'pattern' => '^/login$',
+                'anonymous' => true,
+            ),
             'default' => array(
                 'pattern' => '^/',
                 'form' => array(
@@ -102,7 +106,6 @@ abstract class WebTestCase extends SilexWebTestCase
                     'check_path' => '/login_check',
                 ),
                 'http' => true,
-                'anonymous' => true,
                 'users' => array(
                     'demousername1' => array('ROLE_USER', 'demopassword1'),
                     'demousername2' => array('ROLE_USER', 'demopassword2'),
