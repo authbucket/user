@@ -17,7 +17,7 @@ use Pantarei\User\Model\UserInterface;
 /**
  * User
  *
- * @ORM\Table()
+ * @ORM\Table(name="test_user")
  * @ORM\Entity(repositoryClass="Pantarei\User\Tests\Entity\UserRepository")
  */
 class User implements UserInterface

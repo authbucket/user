@@ -9,12 +9,12 @@
  * file that was distributed with this source code.
  */
 
-use Doctrine\Common\Annotations\AnnotationRegistry;
+require __DIR__ . '/config_prod.php';
 
-$loader = require __DIR__ . '/../vendor/autoload.php';
+$app['db.options'] = array(
+    'driver' => 'pdo_sqlite',
+    'path' => __DIR__ . '/../cache/dev/.ht.sqlite',
+);
 
-$loader->add('Pantarei\User\Tests', __DIR__);
-
-AnnotationRegistry::registerLoader(array($loader, 'loadClass'));
-
-return $loader;
+$app['debug'] = true;
+$app['exception_handler']->disable();
