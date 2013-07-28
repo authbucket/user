@@ -22,7 +22,7 @@ class UserFixture implements FixtureInterface
         $model = new User();
         $model->setUsername('demousername1')
             ->setPassword('demopassword1')
-            ->setSalt('demosalt1')
+            ->setSalt('')
             ->setRoles(array(
                 'ROLE_USER'
             ))
@@ -31,7 +31,7 @@ class UserFixture implements FixtureInterface
         $model = new User();
         $model->setUsername('demousername2')
             ->setPassword('demopassword2')
-            ->setSalt('demosalt2')
+            ->setSalt('')
             ->setRoles(array(
                 'ROLE_USER'
             ))
@@ -40,7 +40,7 @@ class UserFixture implements FixtureInterface
         $model = new User();
         $model->setUsername('demousername3')
             ->setPassword('demopassword3')
-            ->setSalt('demosalt3')
+            ->setSalt('')
             ->setRoles(array(
                 'ROLE_USER'
             ))

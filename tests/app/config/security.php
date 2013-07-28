@@ -24,10 +24,8 @@ $app['security.firewalls'] = array(
             'check_path' => '/login_check',
         ),
         'http' => true,
-        'users' => array(
-            'demousername1' => array('ROLE_USER', 'demopassword1'),
-            'demousername2' => array('ROLE_USER', 'demopassword2'),
-            'demousername3' => array('ROLE_USER', 'demopassword3'),
-        ),
+        'users' => $app->share(function () use ($app) {
+            return $app['pantarei_user.model_manager.factory']->getModelManager('user');
+        }),
     ),
 );
