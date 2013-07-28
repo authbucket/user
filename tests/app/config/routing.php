@@ -12,6 +12,11 @@
 use Silex\Application;
 use Symfony\Component\HttpFoundation\Request;
 
+// Hello world.
+$app->get('/', function (Request $request) use ($app) {
+    return 'Hello Wolrd!!';
+});
+
 // Form login.
 $app->get('/login', function (Request $request) use ($app) {
     return $app['twig']->render('login.html.twig', array(
